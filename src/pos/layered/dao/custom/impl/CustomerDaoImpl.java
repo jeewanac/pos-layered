@@ -77,7 +77,7 @@ public class CustomerDaoImpl implements CustomerDao{
     public ArrayList<CustomerEntity> getAll() throws Exception {
         ArrayList<CustomerEntity> customerEntitys = new ArrayList<>();
         
-        ResultSet rst = CrudUtil.executeQuery("SELECT*FROM customer WHERE CustID = ?");
+        ResultSet rst = CrudUtil.executeQuery("SELECT*FROM customer");
        
         while(rst.next()){
             CustomerEntity customerEntity = new CustomerEntity(
